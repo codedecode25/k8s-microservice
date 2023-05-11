@@ -33,5 +33,5 @@ spec:
       port: 8098
       targetPort: 4200
       nodePort: 32010
-  type: LoadBalancer
+  type: NodePort
 
