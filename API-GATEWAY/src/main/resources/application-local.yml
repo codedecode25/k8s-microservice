@@ -42,6 +42,11 @@ spring:
             lb://FOOD-CATALOGUE-SERVICE
           predicates:
             - Path=/fooditems/**
+        - id: ORDER-SERVICE
+          uri:
+            lb://ORDER-SERVICE
+          predicates:
+            - Path=/order/**
 
 
 hystrix:
