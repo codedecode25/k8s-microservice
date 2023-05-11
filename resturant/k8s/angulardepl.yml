@@ -17,7 +17,7 @@ spec:
           image: codedecode25/angularapp:latest  # Replace with your Docker image and tag
           imagePullPolicy: Always
           ports:
-            - containerPort: 88
+            - containerPort: 4200
 
 ---
 
@@ -30,8 +30,8 @@ spec:
     app: angularapp
   ports:
     - protocol: TCP
-      port: 88
-      targetPort: 88
-      nodePort: 30012
-  type: NodePort
+      port: 8098
+      targetPort: 4200
+      nodePort: 32010
+  type: LoadBalancer
 
