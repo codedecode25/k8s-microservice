@@ -4,10 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -27,4 +24,9 @@ public class FoodItems {
     private Number price;
 
     private Integer restaurantId;
+
+    @Column(name = "count", nullable = false, columnDefinition = "INT DEFAULT 0")
+    private Integer count;
+
+
 }
